@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuration — Dict</title>
+  <meta name="description" content="All configuration keys for Dict, the macOS speech-to-text app.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    code, .mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 cursor-pointer">
+        <img src="assets/icon.png" alt="Dict" class="w-8 h-8 rounded-lg">
+        <span class="font-bold text-lg">Dict</span>
+      </a>
+      <div class="hidden sm:flex items-center gap-8 text-sm text-slate-500">
+        <a href="index.html#features" class="hover:text-slate-900 transition-colors cursor-pointer">Features</a>
+        <a href="index.html#privacy" class="hover:text-slate-900 transition-colors cursor-pointer">Privacy</a>
+        <a href="config.html" class="text-slate-900 font-medium cursor-pointer">Config</a>
+      </div>
+      <a href="index.html#download" class="text-sm font-medium px-4 py-2 rounded-full bg-slate-900 text-white hover:bg-slate-800 transition-colors cursor-pointer">
+        Download
+      </a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 sm:pt-32 pb-12 px-6">
+    <div class="max-w-3xl mx-auto">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-slate-600 transition-colors cursor-pointer mb-6">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></svg>
+        Back to home
+      </a>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">Configuration</h1>
+      <p class="text-slate-500 text-lg leading-relaxed">
+        Config lives at <code class="text-sm px-2 py-0.5 rounded-md bg-slate-100 text-slate-700">~/.config/dict/config.json</code>. Auto-created on first launch. Edit by hand or use <kbd class="px-2 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-xs font-medium text-slate-600">&#8984;,</kbd> from the menu bar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Quick nav -->
+  <section class="px-6 pb-10">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex flex-wrap gap-2">
+        <a href="#recording" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer">Recording</a>
+        <a href="#speech" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer">Speech Engine</a>
+        <a href="#llm" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer">LLM</a>
+        <a href="#modes" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer">Modes</a>
+        <a href="#ui" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer">UI</a>
+        <a href="#other" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer">Other</a>
+        <a href="#example" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer">Example</a>
+        <a href="#files" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer">Related Files</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Config Keys -->
+  <section class="px-6 pb-24">
+    <div class="max-w-3xl mx-auto space-y-16">
+
+      <!-- Recording -->
+      <div id="recording">
+        <h2 class="text-lg font-bold mb-5 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-violet-100 flex items-center justify-center">
+            <svg class="w-4 h-4 text-violet-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"/></svg>
+          </span>
+          Recording
+        </h2>
+
+        <div class="rounded-xl border border-slate-200 divide-y divide-slate-100">
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-violet-700 bg-violet-50 px-2 py-0.5 rounded-md">hotkeyMode</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">How the hotkey triggers recording.</p>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">"pushToTalk"</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+            <div class="text-xs text-slate-500 space-y-1">
+              <p><code class="text-slate-600">"toggle"</code> — Press &#8997;Space to start, press again to stop.</p>
+              <p><code class="text-slate-600">"pushToTalk"</code> — Hold &#8997;Space to record, release to stop.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speech Engine -->
+      <div id="speech">
+        <h2 class="text-lg font-bold mb-5 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center">
+            <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582"/></svg>
+          </span>
+          Speech Engine
+        </h2>
+
+        <div class="rounded-xl border border-slate-200 divide-y divide-slate-100">
+          <!-- sttEngine -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md">sttEngine</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">Speech-to-text backend.</p>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">"apple"</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+            <div class="text-xs text-slate-500 space-y-1">
+              <p><code class="text-slate-600">"apple"</code> — On-device Apple Speech Recognition.</p>
+              <p><code class="text-slate-600">"whisper"</code> — Runs whisper-cli as a subprocess. Requires <code class="text-slate-600">brew install whisper-cpp</code> + a GGML model.</p>
+            </div>
+          </div>
+
+          <!-- whisperModelPath -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md">whisperModelPath</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">Absolute path to a Whisper GGML model file. Only used when <code class="text-xs bg-slate-100 px-1.5 py-0.5 rounded">sttEngine</code> is <code class="text-xs bg-slate-100 px-1.5 py-0.5 rounded">"whisper"</code>.</p>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">""</span>
+              <span class="text-xs text-slate-400">default (empty)</span>
+            </div>
+            <p class="text-xs text-slate-500">Example: <code class="text-slate-600">/opt/homebrew/share/whisper-cpp/models/ggml-base.en.bin</code></p>
+          </div>
+
+          <!-- whisperLanguage -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md">whisperLanguage</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">Language for speech recognition.</p>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">"en"</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"auto"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"en"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"es"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"fr"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"de"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"it"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"pt"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"ja"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"ko"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"zh"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"ru"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"ar"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"hi"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"nl"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"pl"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"sv"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"tr"</span>
+              <span class="px-2 py-0.5 rounded bg-slate-50 border border-slate-100 text-xs mono text-slate-500">"uk"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LLM -->
+      <div id="llm">
+        <h2 class="text-lg font-bold mb-5 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center">
+            <svg class="w-4 h-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg>
+          </span>
+          LLM Post-Processing
+        </h2>
+
+        <div class="rounded-xl border border-slate-200 divide-y divide-slate-100">
+          <!-- llmEnabled -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md">llmEnabled</code>
+              <span class="text-xs text-slate-400 mono shrink-0">bool</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">Enable LLM post-processing to clean up transcriptions (fix grammar, remove filler words).</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">false</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+          </div>
+
+          <!-- llmProvider -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md">llmProvider</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">LLM API provider. Both use their respective chat completions API format.</p>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">"openai"</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+            <div class="text-xs text-slate-500 space-y-1">
+              <p><code class="text-slate-600">"openai"</code> — OpenAI-compatible API (also works with Ollama, LM Studio).</p>
+              <p><code class="text-slate-600">"anthropic"</code> — Anthropic Messages API.</p>
+            </div>
+          </div>
+
+          <!-- llmEndpoint -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md">llmEndpoint</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">API endpoint for LLM requests.</p>
+            <div class="flex flex-wrap gap-2">
+              <code class="px-2 py-0.5 rounded-md bg-slate-100 text-xs text-slate-600 break-all">http://localhost:11434/v1/chat/completions</code>
+              <span class="text-xs text-slate-400 shrink-0">default (Ollama)</span>
+            </div>
+          </div>
+
+          <!-- llmModel -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md">llmModel</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">Model identifier sent to the LLM API.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">"llama3.2"</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+          </div>
+
+          <!-- llmApiKey -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md">llmApiKey</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">API key for the LLM provider. Leave empty for local endpoints that don't require auth.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">""</span>
+              <span class="text-xs text-slate-400">default (empty)</span>
+            </div>
+          </div>
+
+          <!-- llmPrompt -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md">llmPrompt</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">System prompt sent to the LLM for post-processing transcriptions.</p>
+            <div class="text-xs text-slate-500">
+              <p>Default: <em>"Clean up the following voice transcription. Remove filler words, fix grammar and punctuation. Output ONLY the cleaned text."</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modes -->
+      <div id="modes">
+        <h2 class="text-lg font-bold mb-5 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-green-100 flex items-center justify-center">
+            <svg class="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </span>
+          Modes
+        </h2>
+
+        <div class="rounded-xl border border-slate-200 divide-y divide-slate-100">
+          <!-- codeMode -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-green-700 bg-green-50 px-2 py-0.5 rounded-md">codeMode</code>
+              <span class="text-xs text-slate-400 mono shrink-0">bool</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">When enabled, adjusts LLM processing for code-related dictation (preserves technical terms, formatting).</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">false</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+          </div>
+
+          <!-- privacyMode -->
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-green-700 bg-green-50 px-2 py-0.5 rounded-md">privacyMode</code>
+              <span class="text-xs text-slate-400 mono shrink-0">bool</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">Forces offline operation: switches engine to <code class="text-xs bg-slate-100 px-1.5 py-0.5 rounded">whisper</code> and disables LLM.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">false</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI -->
+      <div id="ui">
+        <h2 class="text-lg font-bold mb-5 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-rose-100 flex items-center justify-center">
+            <svg class="w-4 h-4 text-rose-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25h-13.5A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 7.91a2.25 2.25 0 0 1-1.07-1.916V5.25"/></svg>
+          </span>
+          UI
+        </h2>
+
+        <div class="rounded-xl border border-slate-200 divide-y divide-slate-100">
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-rose-700 bg-rose-50 px-2 py-0.5 rounded-md">verboseOverlay</code>
+              <span class="text-xs text-slate-400 mono shrink-0">bool</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">Controls the recording overlay style.</p>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">false</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+            <div class="text-xs text-slate-500 space-y-1">
+              <p><code class="text-slate-600">true</code> — Full overlay with mic, audio levels, and streaming transcription.</p>
+              <p><code class="text-slate-600">false</code> — Compact pill with mic and audio levels only.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other -->
+      <div id="other">
+        <h2 class="text-lg font-bold mb-5 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center">
+            <svg class="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/></svg>
+          </span>
+          Other
+        </h2>
+
+        <div class="rounded-xl border border-slate-200 divide-y divide-slate-100">
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md">onboardingDone</code>
+              <span class="text-xs text-slate-400 mono shrink-0">bool</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">Tracks whether the onboarding wizard has been completed. Set automatically.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">false</span>
+              <span class="text-xs text-slate-400">default</span>
+            </div>
+          </div>
+
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <code class="text-sm font-medium text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md">githubRepo</code>
+              <span class="text-xs text-slate-400 mono shrink-0">string</span>
+            </div>
+            <p class="text-sm text-slate-600 mb-3">GitHub repository for update checking.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-xs mono text-slate-600">""</span>
+              <span class="text-xs text-slate-400">default (empty)</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-2">Format: <code class="text-slate-600">"owner/repo"</code></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example -->
+      <div id="example">
+        <h2 class="text-lg font-bold mb-5">Example config</h2>
+        <div class="rounded-xl bg-slate-950 text-slate-300 p-5 overflow-x-auto">
+          <pre class="text-sm leading-relaxed mono"><code>{
+  <span class="text-violet-400">"hotkeyMode"</span>: <span class="text-green-400">"pushToTalk"</span>,
+  <span class="text-violet-400">"sttEngine"</span>: <span class="text-green-400">"apple"</span>,
+  <span class="text-violet-400">"whisperLanguage"</span>: <span class="text-green-400">"en"</span>,
+  <span class="text-violet-400">"whisperModelPath"</span>: <span class="text-green-400">""</span>,
+  <span class="text-violet-400">"llmEnabled"</span>: <span class="text-amber-400">true</span>,
+  <span class="text-violet-400">"llmProvider"</span>: <span class="text-green-400">"openai"</span>,
+  <span class="text-violet-400">"llmEndpoint"</span>: <span class="text-green-400">"https://api.openai.com/v1/chat/completions"</span>,
+  <span class="text-violet-400">"llmModel"</span>: <span class="text-green-400">"gpt-4o-mini"</span>,
+  <span class="text-violet-400">"llmApiKey"</span>: <span class="text-green-400">""</span>,
+  <span class="text-violet-400">"llmPrompt"</span>: <span class="text-green-400">"Clean up the following voice transcription..."</span>,
+  <span class="text-violet-400">"codeMode"</span>: <span class="text-amber-400">false</span>,
+  <span class="text-violet-400">"privacyMode"</span>: <span class="text-amber-400">false</span>,
+  <span class="text-violet-400">"verboseOverlay"</span>: <span class="text-amber-400">false</span>,
+  <span class="text-violet-400">"onboardingDone"</span>: <span class="text-amber-400">true</span>
+}</code></pre>
+        </div>
+      </div>
+
+      <!-- Related Files -->
+      <div id="files">
+        <h2 class="text-lg font-bold mb-5">Related files</h2>
+        <div class="rounded-xl border border-slate-200 divide-y divide-slate-100">
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-slate-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-slate-700">~/.config/dict/config.json</code>
+              <p class="text-xs text-slate-500 mt-0.5">Main configuration</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-slate-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-slate-700">~/.config/dict/dictionary.json</code>
+              <p class="text-xs text-slate-500 mt-0.5">Custom word replacements (e.g. correct proper nouns)</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-slate-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-slate-700">~/.config/dict/snippets.json</code>
+              <p class="text-xs text-slate-500 mt-0.5">Voice-triggered text snippets (say a phrase, expand to text)</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-slate-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-slate-700">/tmp/dict.log</code>
+              <p class="text-xs text-slate-500 mt-0.5">Runtime log</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100 px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/icon.png" alt="Dict" class="w-6 h-6 rounded-md">
+        <span class="font-semibold text-sm text-slate-900">Dict</span>
+      </div>
+      <p class="text-xs text-slate-400">Open source. Built with Swift.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
