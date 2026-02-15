@@ -58,7 +58,9 @@
         <a href="#llm" class="px-3 py-1.5 rounded-full text-xs font-medium border border-white/[0.08] text-neutral-400 hover:text-white hover:border-white/20 transition-colors cursor-pointer">LLM</a>
         <a href="#modes" class="px-3 py-1.5 rounded-full text-xs font-medium border border-white/[0.08] text-neutral-400 hover:text-white hover:border-white/20 transition-colors cursor-pointer">Modes</a>
         <a href="#ui" class="px-3 py-1.5 rounded-full text-xs font-medium border border-white/[0.08] text-neutral-400 hover:text-white hover:border-white/20 transition-colors cursor-pointer">UI</a>
-        <a href="#prompt" class="px-3 py-1.5 rounded-full text-xs font-medium border border-white/[0.08] text-neutral-400 hover:text-white hover:border-white/20 transition-colors cursor-pointer">Default Prompt</a>
+        <a href="#example" class="px-3 py-1.5 rounded-full text-xs font-medium border border-white/[0.08] text-neutral-400 hover:text-white hover:border-white/20 transition-colors cursor-pointer">Example</a>
+        <a href="#commands" class="px-3 py-1.5 rounded-full text-xs font-medium border border-white/[0.08] text-neutral-400 hover:text-white hover:border-white/20 transition-colors cursor-pointer">Commands</a>
+        <a href="#files" class="px-3 py-1.5 rounded-full text-xs font-medium border border-white/[0.08] text-neutral-400 hover:text-white hover:border-white/20 transition-colors cursor-pointer">Files</a>
       </div>
     </div>
   </section>
@@ -354,6 +356,114 @@
             <div class="flex flex-wrap gap-2">
               <span class="px-2 py-0.5 rounded-md bg-neutral-900 border border-white/[0.06] text-xs mono text-neutral-400">false</span>
               <span class="text-xs text-neutral-600">default</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example Config -->
+      <div id="example">
+        <h2 class="text-lg font-bold mb-5">Example config.json</h2>
+        <div class="rounded-xl bg-neutral-950 border border-white/[0.06] p-5 overflow-x-auto">
+          <pre class="text-sm leading-relaxed mono"><code>{
+  <span class="text-violet-400">"hotkeyMode"</span>: <span class="text-green-400">"pushToTalk"</span>,
+  <span class="text-violet-400">"sttEngine"</span>: <span class="text-green-400">"apple"</span>,
+  <span class="text-violet-400">"whisperLanguage"</span>: <span class="text-green-400">"en"</span>,
+  <span class="text-violet-400">"whisperModelPath"</span>: <span class="text-green-400">""</span>,
+  <span class="text-violet-400">"llmEnabled"</span>: <span class="text-amber-400">true</span>,
+  <span class="text-violet-400">"llmProvider"</span>: <span class="text-green-400">"ollama"</span>,
+  <span class="text-violet-400">"llmEndpoint"</span>: <span class="text-green-400">""</span>,
+  <span class="text-violet-400">"llmModel"</span>: <span class="text-green-400">"llama3.2"</span>,
+  <span class="text-violet-400">"llmApiKey"</span>: <span class="text-green-400">""</span>,
+  <span class="text-violet-400">"llmAccuracy"</span>: <span class="text-amber-400">3</span>,
+  <span class="text-violet-400">"llmPrompt"</span>: <span class="text-green-400">"You are a voice transcription corrector..."</span>,
+  <span class="text-violet-400">"flowMode"</span>: <span class="text-amber-400">false</span>,
+  <span class="text-violet-400">"codeMode"</span>: <span class="text-amber-400">false</span>,
+  <span class="text-violet-400">"privacyMode"</span>: <span class="text-amber-400">false</span>,
+  <span class="text-violet-400">"verboseOverlay"</span>: <span class="text-amber-400">false</span>,
+  <span class="text-violet-400">"overlayPosition"</span>: <span class="text-green-400">"top"</span>,
+  <span class="text-violet-400">"onboardingDone"</span>: <span class="text-amber-400">true</span>
+}</code></pre>
+        </div>
+      </div>
+
+      <!-- Voice Commands -->
+      <div id="commands">
+        <h2 class="text-lg font-bold mb-5 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+            <svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </span>
+          Voice Commands
+        </h2>
+        <p class="text-sm text-neutral-400 mb-4">
+          Stored in <code class="text-xs bg-neutral-900 px-1.5 py-0.5 rounded border border-white/[0.06]">~/.config/dict/commands.json</code>. Map spoken phrases to keyboard shortcuts. When a transcription matches a trigger phrase, the key combo is simulated instead of pasting text.
+        </p>
+        <div class="rounded-xl border border-white/[0.06] divide-y divide-white/[0.06] mb-6">
+          <div class="p-5">
+            <p class="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3">Key combo format</p>
+            <p class="text-sm text-neutral-400 mb-3">Modifier names joined with <code class="text-xs bg-neutral-900 px-1 py-0.5 rounded">+</code>, ending with a key name.</p>
+            <div class="space-y-2 text-xs">
+              <p><span class="text-neutral-500">Modifiers:</span> <code class="text-cyan-400">cmd</code> <code class="text-cyan-400">shift</code> <code class="text-cyan-400">opt</code>/<code class="text-cyan-400">option</code> <code class="text-cyan-400">ctrl</code></p>
+              <p><span class="text-neutral-500">Keys:</span> <code class="text-neutral-300">a</code>-<code class="text-neutral-300">z</code>, <code class="text-neutral-300">0</code>-<code class="text-neutral-300">9</code>, <code class="text-neutral-300">space</code>, <code class="text-neutral-300">return</code>, <code class="text-neutral-300">tab</code>, <code class="text-neutral-300">escape</code>, <code class="text-neutral-300">delete</code>, <code class="text-neutral-300">up</code>/<code class="text-neutral-300">down</code>/<code class="text-neutral-300">left</code>/<code class="text-neutral-300">right</code>, <code class="text-neutral-300">f1</code>-<code class="text-neutral-300">f12</code></p>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-neutral-500 mb-3">Example commands.json:</p>
+        <div class="rounded-xl bg-neutral-950 border border-white/[0.06] p-5 overflow-x-auto">
+          <pre class="text-sm leading-relaxed mono"><code>[
+  {
+    <span class="text-violet-400">"trigger"</span>: <span class="text-green-400">"take a screenshot"</span>,
+    <span class="text-violet-400">"keyCombo"</span>: <span class="text-green-400">"cmd+shift+3"</span>
+  },
+  {
+    <span class="text-violet-400">"trigger"</span>: <span class="text-green-400">"start recording"</span>,
+    <span class="text-violet-400">"keyCombo"</span>: <span class="text-green-400">"cmd+shift+5"</span>
+  },
+  {
+    <span class="text-violet-400">"trigger"</span>: <span class="text-green-400">"undo that"</span>,
+    <span class="text-violet-400">"keyCombo"</span>: <span class="text-green-400">"cmd+z"</span>
+  }
+]</code></pre>
+        </div>
+      </div>
+
+      <!-- Related Files -->
+      <div id="files">
+        <h2 class="text-lg font-bold mb-5">Related files</h2>
+        <div class="rounded-xl border border-white/[0.06] divide-y divide-white/[0.06]">
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-neutral-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-neutral-300">~/.config/dict/config.json</code>
+              <p class="text-xs text-neutral-600 mt-0.5">Main configuration</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-neutral-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-neutral-300">~/.config/dict/dictionary.json</code>
+              <p class="text-xs text-neutral-600 mt-0.5">Custom word replacements (e.g. correct proper nouns)</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-neutral-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-neutral-300">~/.config/dict/snippets.json</code>
+              <p class="text-xs text-neutral-600 mt-0.5">Voice-triggered text snippets (say a phrase, expand to text)</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-neutral-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-neutral-300">~/.config/dict/commands.json</code>
+              <p class="text-xs text-neutral-600 mt-0.5">Voice-triggered keyboard shortcuts (say a phrase, execute a key combo)</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-neutral-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            <div>
+              <code class="text-sm text-neutral-300">/tmp/dict.log</code>
+              <p class="text-xs text-neutral-600 mt-0.5">Runtime log</p>
             </div>
           </div>
         </div>
