@@ -161,117 +161,130 @@
     </div>
   </section>
 
-  <!-- LLM Providers -->
-  <section class="px-6 pb-28">
-    <div class="max-w-3xl mx-auto text-center fade-up">
-      <p class="text-sm font-medium text-neutral-600 mb-2">LLM cleanup works with</p>
-      <p class="text-xs text-neutral-700 mb-6">Local or cloud — your choice</p>
-      <div class="flex flex-wrap items-center justify-center gap-3">
-        <a href="https://ollama.ai" target="_blank" class="px-4 py-2 rounded-full border border-white/[0.08] bg-neutral-950 hover:border-white/[0.15] hover:bg-neutral-900 transition-all cursor-pointer text-sm font-medium text-neutral-300">
-          🦙 Ollama
-        </a>
-        <a href="https://lmstudio.ai" target="_blank" class="px-4 py-2 rounded-full border border-white/[0.08] bg-neutral-950 hover:border-white/[0.15] hover:bg-neutral-900 transition-all cursor-pointer text-sm font-medium text-neutral-300">
-          LM Studio
-        </a>
-        <span class="px-4 py-2 rounded-full border border-white/[0.08] bg-neutral-950 text-sm font-medium text-neutral-500">
-          OpenAI
-        </span>
-        <span class="px-4 py-2 rounded-full border border-white/[0.08] bg-neutral-950 text-sm font-medium text-neutral-500">
-          Anthropic
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features -->
+  <!-- Features - Bento Grid -->
   <section id="features" class="px-6 py-28 border-t border-white/[0.06]">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16 fade-up">
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">What it does</h2>
-        <p class="text-neutral-500 text-lg max-w-lg mx-auto">A lot, actually. But it stays out of your way.</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Everything you need</h2>
+        <p class="text-neutral-500 text-lg max-w-lg mx-auto">Powerful features that stay out of your way.</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 fade-up">
-        <!-- Global Hotkey -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"/></svg>
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 fade-up">
+        
+        <!-- LLM Cleanup - Large Card -->
+        <div class="md:col-span-2 rounded-3xl p-8 border border-white/[0.06] bg-gradient-to-br from-violet-500/[0.08] to-transparent hover:border-violet-500/20 transition-all">
+          <div class="flex items-start justify-between mb-6">
+            <div>
+              <p class="text-xs font-semibold text-violet-400 uppercase tracking-wider mb-2">AI-Powered</p>
+              <h3 class="text-2xl font-bold mb-2">Smart cleanup</h3>
+              <p class="text-neutral-400 leading-relaxed max-w-md">Adjustable correction level from 1–5. Minimal punctuation fixes or full rewrite — you decide how much AI polish you want.</p>
+            </div>
+            <div class="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full bg-neutral-900 border border-white/[0.06]">
+              <span class="text-xs text-neutral-500">Level</span>
+              <div class="flex gap-0.5 ml-1">
+                <div class="w-2 h-2 rounded-full bg-violet-500"></div>
+                <div class="w-2 h-2 rounded-full bg-violet-500"></div>
+                <div class="w-2 h-2 rounded-full bg-violet-500"></div>
+                <div class="w-2 h-2 rounded-full bg-neutral-700"></div>
+                <div class="w-2 h-2 rounded-full bg-neutral-700"></div>
+              </div>
+            </div>
           </div>
-          <h3 class="font-bold text-base mb-1.5">Global hotkey</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed"><kbd class="px-1.5 py-0.5 rounded bg-neutral-800 border border-neutral-700 text-xs">⌥ Space</kbd> from anywhere. Toggle mode or push-to-talk — your call.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-neutral-900 border border-white/[0.06] text-xs text-neutral-400">🦙 Ollama</span>
+            <span class="px-3 py-1 rounded-full bg-neutral-900 border border-white/[0.06] text-xs text-neutral-400">LM Studio</span>
+            <span class="px-3 py-1 rounded-full bg-neutral-900 border border-white/[0.06] text-xs text-neutral-400">OpenAI</span>
+            <span class="px-3 py-1 rounded-full bg-neutral-900 border border-white/[0.06] text-xs text-neutral-400">Anthropic</span>
+          </div>
         </div>
 
-        <!-- Two STT Engines -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/></svg>
+        <!-- Privacy - Tall Card -->
+        <div class="row-span-2 rounded-3xl p-8 border border-white/[0.06] bg-gradient-to-b from-emerald-500/[0.08] to-transparent hover:border-emerald-500/20 transition-all flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
           </div>
-          <h3 class="font-bold text-base mb-1.5">Two STT engines</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Apple Speech (zero setup, just works) or Whisper via Homebrew (local, private, for the paranoid).</p>
-        </div>
-
-        <!-- LLM Cleanup -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg>
+          <p class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Privacy-first</p>
+          <h3 class="text-xl font-bold mb-3">100% local</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-6">Your voice never leaves your Mac. Run fully offline with Whisper + local LLMs.</p>
+          <div class="mt-auto space-y-2">
+            <div class="flex items-center gap-2 text-sm text-neutral-300">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              No cloud required
+            </div>
+            <div class="flex items-center gap-2 text-sm text-neutral-300">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              No account needed
+            </div>
+            <div class="flex items-center gap-2 text-sm text-neutral-300">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              No telemetry
+            </div>
           </div>
-          <h3 class="font-bold text-base mb-1.5">LLM cleanup</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Adjustable correction level (1–5). From "just add punctuation" to "rewrite this mess entirely."</p>
         </div>
 
         <!-- Voice Snippets -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-pink-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg>
+        <div class="rounded-3xl p-6 border border-white/[0.06] bg-gradient-to-br from-pink-500/[0.06] to-transparent hover:border-pink-500/20 transition-all">
+          <p class="text-xs font-semibold text-pink-400 uppercase tracking-wider mb-3">Voice Snippets</p>
+          <h3 class="text-lg font-bold mb-2">Text expansion</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed mb-4">Say a phrase, get full text. Like TextExpander with your voice.</p>
+          <div class="rounded-xl bg-neutral-900/50 border border-white/[0.04] p-3">
+            <p class="text-xs text-neutral-500 mb-1">"my email"</p>
+            <p class="text-sm text-neutral-300">→ victor@company.com</p>
           </div>
-          <h3 class="font-bold text-base mb-1.5">Voice snippets</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Say "my email" and it expands to your actual email. Like TextExpander, but with your voice.</p>
         </div>
 
         <!-- Voice Commands -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+        <div class="rounded-3xl p-6 border border-white/[0.06] bg-gradient-to-br from-cyan-500/[0.06] to-transparent hover:border-cyan-500/20 transition-all">
+          <p class="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-3">Voice Commands</p>
+          <h3 class="text-lg font-bold mb-2">Trigger shortcuts</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed mb-4">Map any phrase to any keyboard shortcut.</p>
+          <div class="rounded-xl bg-neutral-900/50 border border-white/[0.04] p-3">
+            <p class="text-xs text-neutral-500 mb-1">"take a screenshot"</p>
+            <p class="text-sm text-neutral-300">→ <kbd class="px-1.5 py-0.5 rounded bg-neutral-800 border border-neutral-700 text-xs">⌘⇧3</kbd></p>
           </div>
-          <h3 class="font-bold text-base mb-1.5">Voice commands</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Say "take a screenshot" → triggers <kbd class="px-1.5 py-0.5 rounded bg-neutral-800 border border-neutral-700 text-xs">⌘⇧3</kbd>. Map any phrase to any shortcut.</p>
+        </div>
+
+        <!-- Two Engines -->
+        <div class="rounded-3xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-all">
+          <p class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">Speech Engines</p>
+          <h3 class="text-lg font-bold mb-2">Your choice</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed mb-4">Apple Speech (zero setup) or Whisper (local & private).</p>
+          <div class="flex gap-2">
+            <span class="px-3 py-1.5 rounded-full bg-neutral-900 border border-white/[0.06] text-xs text-neutral-300"> Apple</span>
+            <span class="px-3 py-1.5 rounded-full bg-neutral-900 border border-white/[0.06] text-xs text-neutral-300">🤫 Whisper</span>
+          </div>
         </div>
 
         <!-- Flow Mode -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
-          </div>
-          <h3 class="font-bold text-base mb-1.5">Flow mode</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Auto-presses Return after pasting. Perfect for chat apps and terminals. Talk → send → repeat.</p>
+        <div class="rounded-3xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-all">
+          <p class="text-xs font-semibold text-green-400 uppercase tracking-wider mb-3">Flow Mode</p>
+          <h3 class="text-lg font-bold mb-2">Auto-send</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">Presses Return after pasting. Perfect for chat apps & terminals.</p>
         </div>
 
         <!-- Code Mode -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
-          </div>
-          <h3 class="font-bold text-base mb-1.5">Code mode</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Developer-friendly dictation. Handles camelCase, snake_case, and doesn't "fix" your variable names.</p>
+        <div class="rounded-3xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-all">
+          <p class="text-xs font-semibold text-orange-400 uppercase tracking-wider mb-3">Code Mode</p>
+          <h3 class="text-lg font-bold mb-2">Dev-friendly</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">Handles camelCase, snake_case. Won't mangle your variables.</p>
         </div>
 
-        <!-- Privacy -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+        <!-- Hotkey - Wide Card -->
+        <div class="md:col-span-2 lg:col-span-3 rounded-3xl p-8 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-all">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="text-center sm:text-left">
+              <h3 class="text-xl font-bold mb-2">One hotkey to rule them all</h3>
+              <p class="text-neutral-500">Press anywhere, anytime. Toggle mode or push-to-talk.</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <kbd class="px-5 py-3 rounded-xl bg-neutral-900 border border-white/[0.08] text-lg font-medium text-white shadow-lg">⌥</kbd>
+              <span class="text-neutral-600">+</span>
+              <kbd class="px-5 py-3 rounded-xl bg-neutral-900 border border-white/[0.08] text-lg font-medium text-white shadow-lg">Space</kbd>
+            </div>
           </div>
-          <h3 class="font-bold text-base mb-1.5">Privacy-first</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Runs 100% locally with Whisper + Ollama. No cloud required. No data leaves your Mac. Ever.</p>
         </div>
 
-        <!-- Lightweight -->
-        <div class="rounded-2xl p-6 border border-white/[0.06] bg-neutral-950 hover:border-white/[0.12] transition-colors">
-          <div class="w-10 h-10 rounded-xl bg-white/[0.05] flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
-          </div>
-          <h3 class="font-bold text-base mb-1.5">Lightweight</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Menu bar only. No dock icon. No bloat. Native Swift app with zero external dependencies.</p>
-        </div>
       </div>
     </div>
   </section>
