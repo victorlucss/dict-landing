@@ -69,9 +69,26 @@
         <a href="changelog.html" class="hover:text-white transition-colors cursor-pointer">Changelog</a>
         <a href="roadmap.html" class="hover:text-white transition-colors cursor-pointer">Roadmap</a>
       </div>
-      <a href="/Dict.dmg" class="text-sm font-medium px-4 py-2 rounded-full bg-white text-black hover:bg-neutral-200 transition-colors cursor-pointer">
-        Download
-      </a>
+      <div class="flex items-center gap-3">
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="sm:hidden p-2 text-neutral-400 hover:text-white transition-colors">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+          </svg>
+        </button>
+        <a href="/Dict.dmg" class="text-sm font-medium px-4 py-2 rounded-full bg-white text-black hover:bg-neutral-200 transition-colors cursor-pointer">
+          Download
+        </a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="sm:hidden hidden border-t border-white/[0.06] bg-black/95 backdrop-blur-xl">
+      <div class="px-6 py-4 space-y-3">
+        <a href="#features" class="block text-neutral-400 hover:text-white transition-colors py-2">Features</a>
+        <a href="config.html" class="block text-neutral-400 hover:text-white transition-colors py-2">Config</a>
+        <a href="changelog.html" class="block text-neutral-400 hover:text-white transition-colors py-2">Changelog</a>
+        <a href="roadmap.html" class="block text-neutral-400 hover:text-white transition-colors py-2">Roadmap</a>
+      </div>
     </div>
   </nav>
 
@@ -491,6 +508,19 @@
       box.classList.add('scale-95');
       box.classList.remove('scale-100');
     }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
   </script>
 
 </body>
