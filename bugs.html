@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report a Bug — Dict</title>
+  <meta name="description" content="Found something broken? Let us know so we can pretend to fix it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    code, .mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-black text-white antialiased">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/[0.06]">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 cursor-pointer">
+        <img src="assets/icon.png" alt="Dict" class="w-8 h-8 rounded-lg">
+        <span class="font-bold text-lg">Dict</span>
+      </a>
+      <div class="hidden sm:flex items-center gap-8 text-sm text-neutral-500">
+        <a href="index.html#features" class="hover:text-white transition-colors cursor-pointer">Features</a>
+        <a href="config.html" class="hover:text-white transition-colors cursor-pointer">Config</a>
+        <a href="changelog.html" class="hover:text-white transition-colors cursor-pointer">Changelog</a>
+        <a href="roadmap.html" class="hover:text-white transition-colors cursor-pointer">Roadmap</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="mobile-menu-btn" class="sm:hidden p-2 text-neutral-400 hover:text-white transition-colors">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+          </svg>
+        </button>
+        <a href="/Dict.dmg" class="text-sm font-medium px-4 py-2 rounded-full bg-white text-black hover:bg-neutral-200 transition-colors cursor-pointer">
+          Download
+        </a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="sm:hidden hidden border-t border-white/[0.06] bg-black/95 backdrop-blur-xl">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html#features" class="block text-neutral-400 hover:text-white transition-colors py-2">Features</a>
+        <a href="config.html" class="block text-neutral-400 hover:text-white transition-colors py-2">Config</a>
+        <a href="changelog.html" class="block text-neutral-400 hover:text-white transition-colors py-2">Changelog</a>
+        <a href="roadmap.html" class="block text-neutral-400 hover:text-white transition-colors py-2">Roadmap</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 sm:pt-32 pb-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-sm text-neutral-600 hover:text-neutral-300 transition-colors cursor-pointer mb-6">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></svg>
+        Back to home
+      </a>
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 rounded-2xl bg-rose-500/10 flex items-center justify-center">
+          <svg class="w-6 h-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0 1 12 12.75Zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 0 1-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 0 0 2.248-2.354M12 12.75a2.25 2.25 0 0 1-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 0 0-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 0 1 .4-2.253M12 8.25a2.25 2.25 0 0 0-2.248 2.146M12 8.25a2.25 2.25 0 0 1 2.248 2.146M8.683 5a6.032 6.032 0 0 1-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0 1 15.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 0 0-.575-1.752M4.921 6a24.048 24.048 0 0 0-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 0 1-5.223 1.082"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Report a Bug</h1>
+        </div>
+      </div>
+      <p class="text-neutral-400 text-lg leading-relaxed">
+        Found something broken? Congrats, you're now an unpaid QA engineer. Fill this out and we'll pretend to look at it.
+      </p>
+    </div>
+  </section>
+
+  <!-- Bug Report Form -->
+  <section class="px-6 pb-24">
+    <div class="max-w-2xl mx-auto">
+      <form id="bug-form" class="space-y-6">
+        
+        <!-- Title -->
+        <div>
+          <label for="title" class="block text-sm font-medium text-neutral-300 mb-2">
+            Bug title <span class="text-rose-400">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="title" 
+            name="title" 
+            required
+            placeholder="e.g., App crashes when I talk too fast"
+            class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-white/[0.08] text-white placeholder-neutral-600 focus:outline-none focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 transition-all"
+          >
+        </div>
+
+        <!-- Version & OS -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="version" class="block text-sm font-medium text-neutral-300 mb-2">
+              Dict version <span class="text-rose-400">*</span>
+            </label>
+            <select 
+              id="version" 
+              name="version" 
+              required
+              class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-white/[0.08] text-white focus:outline-none focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 transition-all"
+            >
+              <option value="">Select version</option>
+              <option value="0.3.3">0.3.3 (latest)</option>
+              <option value="0.3.2">0.3.2</option>
+              <option value="0.3.1">0.3.1</option>
+              <option value="0.3.0">0.3.0</option>
+              <option value="older">Older version</option>
+            </select>
+          </div>
+          <div>
+            <label for="os" class="block text-sm font-medium text-neutral-300 mb-2">
+              macOS version <span class="text-rose-400">*</span>
+            </label>
+            <select 
+              id="os" 
+              name="os" 
+              required
+              class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-white/[0.08] text-white focus:outline-none focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 transition-all"
+            >
+              <option value="">Select macOS</option>
+              <option value="sequoia-15">Sequoia 15.x</option>
+              <option value="sonoma-14">Sonoma 14.x</option>
+              <option value="ventura-13">Ventura 13.x</option>
+              <option value="older">Older (not supported)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category -->
+        <div>
+          <label class="block text-sm font-medium text-neutral-300 mb-3">
+            What's broken? <span class="text-rose-400">*</span>
+          </label>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 p-4 rounded-xl border border-white/[0.08] bg-neutral-950 cursor-pointer hover:border-white/[0.15] transition-all has-[:checked]:border-violet-500/50 has-[:checked]:bg-violet-500/[0.05]">
+              <input type="radio" name="category" value="crash" class="w-4 h-4 text-violet-500 bg-neutral-900 border-neutral-700 focus:ring-violet-500/20">
+              <div>
+                <p class="font-medium text-sm">💥 Crash</p>
+                <p class="text-xs text-neutral-500">App closes unexpectedly</p>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-4 rounded-xl border border-white/[0.08] bg-neutral-950 cursor-pointer hover:border-white/[0.15] transition-all has-[:checked]:border-violet-500/50 has-[:checked]:bg-violet-500/[0.05]">
+              <input type="radio" name="category" value="transcription" class="w-4 h-4 text-violet-500 bg-neutral-900 border-neutral-700 focus:ring-violet-500/20">
+              <div>
+                <p class="font-medium text-sm">🎤 Transcription</p>
+                <p class="text-xs text-neutral-500">Speech not recognized correctly</p>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-4 rounded-xl border border-white/[0.08] bg-neutral-950 cursor-pointer hover:border-white/[0.15] transition-all has-[:checked]:border-violet-500/50 has-[:checked]:bg-violet-500/[0.05]">
+              <input type="radio" name="category" value="injection" class="w-4 h-4 text-violet-500 bg-neutral-900 border-neutral-700 focus:ring-violet-500/20">
+              <div>
+                <p class="font-medium text-sm">⌨️ Text injection</p>
+                <p class="text-xs text-neutral-500">Text not appearing in app</p>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-4 rounded-xl border border-white/[0.08] bg-neutral-950 cursor-pointer hover:border-white/[0.15] transition-all has-[:checked]:border-violet-500/50 has-[:checked]:bg-violet-500/[0.05]">
+              <input type="radio" name="category" value="llm" class="w-4 h-4 text-violet-500 bg-neutral-900 border-neutral-700 focus:ring-violet-500/20">
+              <div>
+                <p class="font-medium text-sm">🤖 LLM/Cleanup</p>
+                <p class="text-xs text-neutral-500">AI processing issues</p>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-4 rounded-xl border border-white/[0.08] bg-neutral-950 cursor-pointer hover:border-white/[0.15] transition-all has-[:checked]:border-violet-500/50 has-[:checked]:bg-violet-500/[0.05]">
+              <input type="radio" name="category" value="ui" class="w-4 h-4 text-violet-500 bg-neutral-900 border-neutral-700 focus:ring-violet-500/20">
+              <div>
+                <p class="font-medium text-sm">🎨 UI/Overlay</p>
+                <p class="text-xs text-neutral-500">Visual glitches</p>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-4 rounded-xl border border-white/[0.08] bg-neutral-950 cursor-pointer hover:border-white/[0.15] transition-all has-[:checked]:border-violet-500/50 has-[:checked]:bg-violet-500/[0.05]">
+              <input type="radio" name="category" value="other" class="w-4 h-4 text-violet-500 bg-neutral-900 border-neutral-700 focus:ring-violet-500/20">
+              <div>
+                <p class="font-medium text-sm">🤷 Other</p>
+                <p class="text-xs text-neutral-500">Something else entirely</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label for="description" class="block text-sm font-medium text-neutral-300 mb-2">
+            What happened? <span class="text-rose-400">*</span>
+          </label>
+          <textarea 
+            id="description" 
+            name="description" 
+            rows="4"
+            required
+            placeholder="Describe the bug in detail. What did you expect to happen? What actually happened?"
+            class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-white/[0.08] text-white placeholder-neutral-600 focus:outline-none focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 transition-all resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Steps to reproduce -->
+        <div>
+          <label for="steps" class="block text-sm font-medium text-neutral-300 mb-2">
+            Steps to reproduce
+          </label>
+          <textarea 
+            id="steps" 
+            name="steps" 
+            rows="3"
+            placeholder="1. Open Dict&#10;2. Press ⌥Space&#10;3. Say something&#10;4. Watch it explode"
+            class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-white/[0.08] text-white placeholder-neutral-600 focus:outline-none focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 transition-all resize-none mono text-sm"
+          ></textarea>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-neutral-300 mb-2">
+            Your email <span class="text-neutral-600">(optional, for follow-up)</span>
+          </label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            placeholder="you@example.com"
+            class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-white/[0.08] text-white placeholder-neutral-600 focus:outline-none focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 transition-all"
+          >
+        </div>
+
+        <!-- Submit -->
+        <div class="pt-4">
+          <button 
+            type="submit"
+            class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold hover:from-rose-600 hover:to-pink-600 transition-all shadow-lg shadow-rose-500/20 hover:shadow-rose-500/30"
+          >
+            Submit Bug Report
+          </button>
+          <p class="text-xs text-neutral-600 mt-3">
+            This creates a GitHub issue. No spam, we promise. We're too lazy for that.
+          </p>
+        </div>
+
+      </form>
+
+      <!-- Alternative: GitHub Issues -->
+      <div class="mt-16 p-6 rounded-2xl border border-white/[0.06] bg-neutral-950">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-neutral-900 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-neutral-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">Prefer GitHub?</h3>
+            <p class="text-sm text-neutral-500 mb-3">
+              You can also open an issue directly on GitHub if you're into that sort of thing.
+            </p>
+            <a 
+              href="https://github.com/victorlucss/dict/issues/new" 
+              target="_blank"
+              class="inline-flex items-center gap-2 text-sm font-medium text-violet-400 hover:text-violet-300 transition-colors"
+            >
+              Open GitHub Issue
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/[0.06] px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/icon.png" alt="Dict" class="w-6 h-6 rounded-md">
+        <span class="font-semibold text-sm">Dict</span>
+      </div>
+      <p class="text-xs text-neutral-600">Built with Swift. Not built with hype.</p>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="mx-6 max-w-md w-full rounded-2xl border border-white/[0.08] bg-neutral-950 p-8 text-center transform scale-95 transition-transform duration-300" id="success-box">
+      <div class="text-5xl mb-4">🐛</div>
+      <h3 class="text-xl font-bold mb-2">Bug Reported!</h3>
+      <p class="text-neutral-400 text-sm leading-relaxed mb-6">Thanks for taking the time. We'll look into it... eventually. Maybe. No promises.</p>
+      <button onclick="closeSuccessModal()" class="px-5 py-2.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-neutral-200 transition-colors cursor-pointer">Cool, I did my part</button>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Form submission
+    document.getElementById('bug-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+      
+      // Build GitHub issue body
+      const issueTitle = encodeURIComponent(data.title);
+      const issueBody = encodeURIComponent(`## Bug Report
+
+**Version:** ${data.version}
+**macOS:** ${data.os}
+**Category:** ${data.category}
+
+## Description
+${data.description}
+
+## Steps to Reproduce
+${data.steps || 'Not provided'}
+
+---
+${data.email ? `Reporter: ${data.email}` : 'Submitted via dict.studio/bugs.html'}`);
+
+      // Open GitHub issue
+      window.open(`https://github.com/victorlucss/dict/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank');
+      
+      // Show success modal
+      showSuccessModal();
+      
+      // Reset form
+      this.reset();
+    });
+
+    function showSuccessModal() {
+      const modal = document.getElementById('success-modal');
+      const box = document.getElementById('success-box');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      box.classList.remove('scale-95');
+      modal.classList.add('opacity-100');
+      box.classList.add('scale-100');
+    }
+
+    function closeSuccessModal() {
+      const modal = document.getElementById('success-modal');
+      const box = document.getElementById('success-box');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100');
+      box.classList.add('scale-95');
+      box.classList.remove('scale-100');
+    }
+  </script>
+
+</body>
+</html>
