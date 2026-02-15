@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roadmap — Dict</title>
+  <meta name="description" content="What's coming next for Dict, the macOS speech-to-text app.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white antialiased">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/[0.06]">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 cursor-pointer">
+        <img src="assets/icon.png" alt="Dict" class="w-8 h-8 rounded-lg">
+        <span class="font-bold text-lg">Dict</span>
+      </a>
+      <div class="hidden sm:flex items-center gap-8 text-sm text-neutral-500">
+        <a href="index.html#features" class="hover:text-white transition-colors cursor-pointer">Features</a>
+        <a href="config.html" class="hover:text-white transition-colors cursor-pointer">Config</a>
+        <a href="changelog.html" class="hover:text-white transition-colors cursor-pointer">Changelog</a>
+        <a href="roadmap.html" class="text-white font-medium cursor-pointer">Roadmap</a>
+      </div>
+      <a href="/Dict.dmg" class="text-sm font-medium px-4 py-2 rounded-full bg-white text-black hover:bg-neutral-200 transition-colors cursor-pointer">
+        Download
+      </a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 sm:pt-32 pb-12 px-6">
+    <div class="max-w-3xl mx-auto">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-sm text-neutral-600 hover:text-neutral-300 transition-colors cursor-pointer mb-6">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></svg>
+        Back to home
+      </a>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">Roadmap</h1>
+      <p class="text-neutral-400 text-lg leading-relaxed">
+        Ideas we're thinking about. No promises, no ETAs. Just vibes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="px-6 pb-24">
+    <div class="max-w-3xl mx-auto space-y-12">
+
+      <!-- Coming Soon -->
+      <div>
+        <div class="flex items-center gap-2 mb-6">
+          <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+          <h2 class="text-lg font-bold text-emerald-400">Coming Soon</h2>
+        </div>
+        <div class="grid gap-4">
+          <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-6 hover:border-emerald-500/30 transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">More Languages</h3>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-xs font-medium text-emerald-400">High Priority</span>
+            </div>
+            <p class="text-sm text-neutral-400 mb-4">Expand beyond English and Portuguese. Spanish, French, German, Italian, and more. Auto-detection would be nice too.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🇪🇸 Spanish</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🇫🇷 French</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🇩🇪 German</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🇮🇹 Italian</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🇯🇵 Japanese</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🇨🇳 Chinese</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-6 hover:border-emerald-500/30 transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Custom Hotkeys</h3>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-xs font-medium text-emerald-400">High Priority</span>
+            </div>
+            <p class="text-sm text-neutral-400">Let users pick their own hotkey instead of hardcoding ⌥Space. Some people already use that for something else.</p>
+          </div>
+
+          <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-6 hover:border-emerald-500/30 transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Transcription History</h3>
+            </div>
+            <p class="text-sm text-neutral-400">Keep a log of recent transcriptions. Sometimes you need to grab something you said 5 minutes ago.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exploring -->
+      <div>
+        <div class="flex items-center gap-2 mb-6">
+          <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+          <h2 class="text-lg font-bold text-amber-400">Exploring</h2>
+        </div>
+        <div class="grid gap-4">
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950 p-6 hover:border-white/[0.12] transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">App-Aware Tone</h3>
+            </div>
+            <p class="text-sm text-neutral-400 mb-4">Automatically adjust LLM correction style based on the active app. Casual in Slack, formal in Mail, code-aware in VS Code.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">💬 Casual for chat</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">📧 Formal for email</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">💻 Code for IDEs</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950 p-6 hover:border-white/[0.12] transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Continuous Dictation</h3>
+            </div>
+            <p class="text-sm text-neutral-400">A mode where you don't have to keep pressing the hotkey. Start once, keep talking, automatic sentence detection and pasting.</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950 p-6 hover:border-white/[0.12] transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Raycast / Alfred Integration</h3>
+            </div>
+            <p class="text-sm text-neutral-400">Trigger Dict from Raycast or Alfred. Search your snippets and commands. Power user stuff.</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950 p-6 hover:border-white/[0.12] transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">iCloud Sync</h3>
+            </div>
+            <p class="text-sm text-neutral-400">Sync config, snippets, commands, and dictionary across your Macs via iCloud. No server needed.</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950 p-6 hover:border-white/[0.12] transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Export / Import</h3>
+            </div>
+            <p class="text-sm text-neutral-400">Export your snippets and commands to share with others or backup. Import from other dictation apps.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maybe Someday -->
+      <div>
+        <div class="flex items-center gap-2 mb-6">
+          <span class="w-3 h-3 rounded-full bg-neutral-600"></span>
+          <h2 class="text-lg font-bold text-neutral-400">Maybe Someday</h2>
+        </div>
+        <div class="grid gap-4">
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950/50 p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold text-neutral-400">iOS Companion App</h3>
+            </div>
+            <p class="text-sm text-neutral-500">A lightweight iPhone app that shares your snippets and lets you dictate on the go. Big maybe.</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950/50 p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold text-neutral-400">Audio Transcription</h3>
+            </div>
+            <p class="text-sm text-neutral-500">Drag an audio file onto the menu bar icon to transcribe it. Useful for meeting recordings, voice memos.</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950/50 p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold text-neutral-400">Speaker Diarization</h3>
+            </div>
+            <p class="text-sm text-neutral-500">Identify who's speaking in multi-person recordings. "Person A said X, Person B said Y." Very ambitious.</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/[0.06] bg-neutral-950/50 p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold text-neutral-400">Real-time Translation</h3>
+            </div>
+            <p class="text-sm text-neutral-500">Speak in one language, paste in another. Probably slow and impractical, but would be cool.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suggest -->
+      <div class="rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-500/[0.05] to-transparent p-8 text-center">
+        <h3 class="text-xl font-bold mb-2">Got an idea?</h3>
+        <p class="text-neutral-400 mb-6">We're building this for us, but we're open to suggestions. If you have a feature request, let us know.</p>
+        <a href="https://github.com/victorlucss/dict/issues" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-sm font-medium text-violet-400 hover:bg-violet-500/20 transition-colors cursor-pointer">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Open an issue on GitHub
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/[0.06] px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/icon.png" alt="Dict" class="w-6 h-6 rounded-md">
+        <span class="font-semibold text-sm">Dict</span>
+      </div>
+      <p class="text-xs text-neutral-600">Built with Swift. Not built with hype.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

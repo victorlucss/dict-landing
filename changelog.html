@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog — Dict</title>
+  <meta name="description" content="What's new in Dict, the macOS speech-to-text app.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    code, .mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-black text-white antialiased">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/[0.06]">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 cursor-pointer">
+        <img src="assets/icon.png" alt="Dict" class="w-8 h-8 rounded-lg">
+        <span class="font-bold text-lg">Dict</span>
+      </a>
+      <div class="hidden sm:flex items-center gap-8 text-sm text-neutral-500">
+        <a href="index.html#features" class="hover:text-white transition-colors cursor-pointer">Features</a>
+        <a href="config.html" class="hover:text-white transition-colors cursor-pointer">Config</a>
+        <a href="changelog.html" class="text-white font-medium cursor-pointer">Changelog</a>
+        <a href="roadmap.html" class="hover:text-white transition-colors cursor-pointer">Roadmap</a>
+      </div>
+      <a href="/Dict.dmg" class="text-sm font-medium px-4 py-2 rounded-full bg-white text-black hover:bg-neutral-200 transition-colors cursor-pointer">
+        Download
+      </a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 sm:pt-32 pb-12 px-6">
+    <div class="max-w-3xl mx-auto">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-sm text-neutral-600 hover:text-neutral-300 transition-colors cursor-pointer mb-6">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/></svg>
+        Back to home
+      </a>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">Changelog</h1>
+      <p class="text-neutral-400 text-lg leading-relaxed">
+        What's new, what's fixed, what's broken differently now.
+      </p>
+    </div>
+  </section>
+
+  <!-- Changelog -->
+  <section class="px-6 pb-24">
+    <div class="max-w-3xl mx-auto space-y-12">
+
+      <!-- v0.3.0 -->
+      <div class="relative pl-8 border-l-2 border-violet-500/30">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-violet-500 border-4 border-black"></div>
+        <div class="mb-4">
+          <div class="flex items-center gap-3 mb-1">
+            <h2 class="text-xl font-bold">v0.3.0</h2>
+            <span class="px-2 py-0.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-xs font-medium text-violet-400">Latest</span>
+          </div>
+          <p class="text-sm text-neutral-600">February 2026</p>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-emerald-400 mb-3">✨ New Features</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Voice Commands</strong> — Map spoken phrases to keyboard shortcuts. Say "take a screenshot" to trigger ⌘⇧3.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Branded DMG Installer</strong> — Custom DMG with gradient background and drag-to-install arrow. Looks pretty now.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Modern Preferences</strong> — Redesigned preferences window with sidebar navigation.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Update Checker</strong> — Automatically checks for new versions on launch.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-blue-400 mb-3">🔧 Improvements</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span>Improved text injection reliability across more apps</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span>Better LLM processing with refined prompts</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span>Overlay enhancements and smoother animations</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0.2.0 -->
+      <div class="relative pl-8 border-l-2 border-white/[0.06]">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+        <div class="mb-4">
+          <h2 class="text-xl font-bold mb-1">v0.2.0</h2>
+          <p class="text-sm text-neutral-600">February 2026</p>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-emerald-400 mb-3">✨ New Features</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">LM Studio Support</strong> — Added LM Studio as a separate LLM provider alongside Ollama.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Flow Mode</strong> — Auto-press Return after pasting. Perfect for chat apps and terminals.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Overlay Position</strong> — Choose between top or bottom screen position for the recording pill.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Code Signing</strong> — Proper code signing for persistent permissions across updates.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-blue-400 mb-3">🔧 Improvements</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span>Redesigned recording overlay: dark pill with white dot-level indicators</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span>Processing animation stays visible during STT/LLM processing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span>Lock endpoint/API key fields based on provider selection</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-rose-400 mb-3">🐛 Bug Fixes</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-rose-400 mt-0.5">•</span>
+                <span>Fixed pill staying open on empty transcription or STT errors</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0.1.0 -->
+      <div class="relative pl-8 border-l-2 border-white/[0.06]">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+        <div class="mb-4">
+          <h2 class="text-xl font-bold mb-1">v0.1.0</h2>
+          <p class="text-sm text-neutral-600">February 2026</p>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-emerald-400 mb-3">🎉 Initial Release</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span>macOS menu-bar app that converts voice to text via global hotkey (⌥Space)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span>Two STT backends: Apple Speech Recognition and Whisper (via whisper-cpp)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span>Optional LLM post-processing with Ollama support</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span>Push-to-talk and toggle hotkey modes</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span>Voice snippets for text expansion</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span>Custom dictionary for proper noun corrections</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span>Privacy-first: runs 100% locally, no cloud required</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span>Native Swift app, no external dependencies</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/[0.06] px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <img src="assets/icon.png" alt="Dict" class="w-6 h-6 rounded-md">
+        <span class="font-semibold text-sm">Dict</span>
+      </div>
+      <p class="text-xs text-neutral-600">Built with Swift. Not built with hype.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
