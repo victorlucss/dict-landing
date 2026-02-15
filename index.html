@@ -23,25 +23,34 @@
       transform: translateY(0);
     }
 
-    /* Audio dots */
-    .audio-dot { animation: pulse-dot 1.4s ease-in-out infinite; }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 1; }
+    /* Audio dots - wave animation */
+    .audio-dot { 
+      animation: wave-dot 1.8s ease-in-out infinite;
+      background-color: #525252;
+    }
+    @keyframes wave-dot {
+      0%, 100% { 
+        transform: scale(0.7); 
+        background-color: #525252;
+      }
+      50% { 
+        transform: scale(1.3); 
+        background-color: #ffffff;
+      }
     }
     .audio-dot:nth-child(1) { animation-delay: 0s; }
-    .audio-dot:nth-child(2) { animation-delay: 0.1s; }
-    .audio-dot:nth-child(3) { animation-delay: 0.2s; }
-    .audio-dot:nth-child(4) { animation-delay: 0.3s; }
-    .audio-dot:nth-child(5) { animation-delay: 0.4s; }
-    .audio-dot:nth-child(6) { animation-delay: 0.5s; }
-    .audio-dot:nth-child(7) { animation-delay: 0.6s; }
-    .audio-dot:nth-child(8) { animation-delay: 0.7s; }
-    .audio-dot:nth-child(9) { animation-delay: 0.8s; }
+    .audio-dot:nth-child(2) { animation-delay: 0.08s; }
+    .audio-dot:nth-child(3) { animation-delay: 0.16s; }
+    .audio-dot:nth-child(4) { animation-delay: 0.24s; }
+    .audio-dot:nth-child(5) { animation-delay: 0.32s; }
+    .audio-dot:nth-child(6) { animation-delay: 0.4s; }
+    .audio-dot:nth-child(7) { animation-delay: 0.48s; }
+    .audio-dot:nth-child(8) { animation-delay: 0.56s; }
+    .audio-dot:nth-child(9) { animation-delay: 0.64s; }
 
     @media (prefers-reduced-motion: reduce) {
       .fade-up { opacity: 1; transform: none; transition: none; }
-      .audio-dot { animation: none; opacity: 0.6; }
+      .audio-dot { animation: none; transform: scale(1); background-color: #737373; }
     }
   </style>
 </head>
