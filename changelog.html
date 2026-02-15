@@ -54,23 +54,84 @@
   <section class="px-6 pb-24">
     <div class="max-w-3xl mx-auto space-y-12">
 
-      <!-- v0.3.2 -->
+      <!-- v0.3.3 -->
       <div class="relative pl-8 border-l-2 border-violet-500/30">
         <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-violet-500 border-4 border-black"></div>
         <div class="mb-4">
           <div class="flex items-center gap-3 mb-1">
-            <h2 class="text-xl font-bold">v0.3.2</h2>
+            <h2 class="text-xl font-bold">v0.3.3</h2>
             <span class="px-2 py-0.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-xs font-medium text-violet-400">Latest</span>
           </div>
           <p class="text-sm text-neutral-600">February 2026</p>
         </div>
         <div class="space-y-4 mb-12">
           <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-rose-400 mb-3">🐛 Bug Fixes</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-rose-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Fixed dropped transcriptions</strong> — No longer preempts final result with empty delivery. Your words actually make it to the screen now.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-rose-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Error handler cleanup</strong> — Better error handling that doesn't leave things in a weird state.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
             <h3 class="font-semibold text-sm text-blue-400 mb-3">🔧 Improvements</h3>
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5">•</span>
-                <span>Minor stability improvements and bug fixes</span>
+                <span><strong class="text-neutral-200">Accessibility permission required</strong> — Now properly requests Accessibility access for reliable text injection.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Whisper setup guide</strong> — Added documentation for setting up local Whisper.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0.3.2 -->
+      <div class="relative pl-8 border-l-2 border-white/[0.06]">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+        <div class="mb-4">
+          <div class="flex items-center gap-3 mb-1">
+            <h2 class="text-xl font-bold">v0.3.2</h2>
+          </div>
+          <p class="text-sm text-neutral-600">February 2026</p>
+        </div>
+        <div class="space-y-4 mb-12">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-emerald-400 mb-3">✨ New Features</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">DictCore library</strong> — Extracted core functionality into a reusable library.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Test infrastructure</strong> — Added testing framework for better reliability.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-rose-400 mb-3">🐛 Bug Fixes</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-rose-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Push-to-talk fix</strong> — Resolved issues with push-to-talk mode.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-blue-400 mb-3">🔧 Improvements</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Signed DMG</strong> — DMG is now properly signed for smoother installation.</span>
               </li>
             </ul>
           </div>
@@ -92,7 +153,11 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5">•</span>
-                <span>Minor stability improvements and bug fixes</span>
+                <span><strong class="text-neutral-200">Branded DMG</strong> — Custom installer with Gatekeeper fix script.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Notarization support</strong> — App is now notarized by Apple for smoother first launch.</span>
               </li>
             </ul>
           </div>
