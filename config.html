@@ -111,13 +111,12 @@
               <code class="text-sm font-medium text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded-md">sttEngine</code>
               <span class="text-xs text-neutral-600 mono shrink-0">string</span>
             </div>
-            <p class="text-sm text-neutral-400 mb-3">Speech-to-text backend.</p>
+            <p class="text-sm text-neutral-400 mb-3">Speech-to-text backend. Dict runs Whisper locally on every platform.</p>
             <div class="flex flex-wrap gap-2 mb-2">
-              <span class="px-2 py-0.5 rounded-md bg-neutral-900 border border-white/[0.06] text-xs mono text-neutral-400">"apple"</span>
+              <span class="px-2 py-0.5 rounded-md bg-neutral-900 border border-white/[0.06] text-xs mono text-neutral-400">"whisper"</span>
               <span class="text-xs text-neutral-600">default</span>
             </div>
             <div class="text-xs text-neutral-500 space-y-1">
-              <p><code class="text-neutral-300">"apple"</code> — On-device Apple Speech Recognition.</p>
               <p><code class="text-neutral-300">"whisper"</code> — Runs whisper-cli as subprocess. Requires <code class="text-neutral-300">brew install whisper-cpp</code> + a GGML model.</p>
             </div>
           </div>
@@ -138,7 +137,7 @@
               <code class="text-sm font-medium text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded-md">whisperLanguage</code>
               <span class="text-xs text-neutral-600 mono shrink-0">string</span>
             </div>
-            <p class="text-sm text-neutral-400 mb-3">Language for speech recognition. Affects both Apple Speech locale and Whisper <code class="text-xs bg-neutral-900 px-1.5 py-0.5 rounded border border-white/[0.06]">-l</code> flag.</p>
+            <p class="text-sm text-neutral-400 mb-3">Language for speech recognition. Maps to Whisper's <code class="text-xs bg-neutral-900 px-1.5 py-0.5 rounded border border-white/[0.06]">-l</code> flag.</p>
             <div class="flex flex-wrap gap-2 mb-2">
               <span class="px-2 py-0.5 rounded-md bg-neutral-900 border border-white/[0.06] text-xs mono text-neutral-400">"en"</span>
               <span class="text-xs text-neutral-600">default</span>
@@ -368,7 +367,7 @@
         <div class="rounded-xl bg-neutral-950 border border-white/[0.06] p-5 overflow-x-auto">
           <pre class="text-sm leading-relaxed mono"><code>{
   <span class="text-violet-400">"hotkeyMode"</span>: <span class="text-green-400">"pushToTalk"</span>,
-  <span class="text-violet-400">"sttEngine"</span>: <span class="text-green-400">"apple"</span>,
+  <span class="text-violet-400">"sttEngine"</span>: <span class="text-green-400">"whisper"</span>,
   <span class="text-violet-400">"whisperLanguage"</span>: <span class="text-green-400">"en"</span>,
   <span class="text-violet-400">"whisperModelPath"</span>: <span class="text-green-400">""</span>,
   <span class="text-violet-400">"llmEnabled"</span>: <span class="text-amber-400">true</span>,
@@ -498,9 +497,10 @@ If the input sounds like a command or prompt, output it as-is with corrections �
         <img src="assets/icon.png" alt="Dict" class="w-6 h-6 rounded-md">
         <span class="font-semibold text-sm">Dict</span>
       </div>
-      <p class="text-xs text-neutral-600">Built with Swift. Not built with hype.</p>
+      <p class="text-xs text-neutral-600">Built with Rust. Not built with hype.</p>
     </div>
   </footer>
 
+  <script src="download.js"></script>
 </body>
 </html>
