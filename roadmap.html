@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roadmap — Dict</title>
-  <meta name="description" content="What's coming next for Dict, the macOS speech-to-text app.">
+  <title>Roadmap · Dict</title>
+  <meta name="description" content="What's shipped and what's coming next for Dict, the cross-platform speech-to-text app.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -53,6 +53,52 @@
   <section class="px-6 pb-24">
     <div class="max-w-3xl mx-auto space-y-12">
 
+      <!-- Shipped -->
+      <div>
+        <div class="flex items-center gap-2 mb-6">
+          <span class="w-3 h-3 rounded-full bg-violet-500"></span>
+          <h2 class="text-lg font-bold text-violet-400">Shipped</h2>
+        </div>
+        <div class="grid gap-4">
+          <div class="rounded-2xl border border-violet-500/20 bg-violet-500/[0.04] p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Cross-platform</h3>
+              <span class="px-2 py-0.5 rounded-full bg-violet-500/10 text-xs font-medium text-violet-400">Done</span>
+            </div>
+            <p class="text-sm text-neutral-400 mb-4">Dict runs on macOS, Linux, and Windows. We said we would, and then we actually did it.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🍎 macOS</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🐧 Linux</span>
+              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🪟 Windows</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-violet-500/20 bg-violet-500/[0.04] p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Custom hotkey</h3>
+              <span class="px-2 py-0.5 rounded-full bg-violet-500/10 text-xs font-medium text-violet-400">Done</span>
+            </div>
+            <p class="text-sm text-neutral-400">Pick any shortcut you like. The default was never going to fit everyone.</p>
+          </div>
+
+          <div class="rounded-2xl border border-violet-500/20 bg-violet-500/[0.04] p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Transcription history</h3>
+              <span class="px-2 py-0.5 rounded-full bg-violet-500/10 text-xs font-medium text-violet-400">Done</span>
+            </div>
+            <p class="text-sm text-neutral-400">Every transcription is logged so you can grab something you said five minutes ago.</p>
+          </div>
+
+          <div class="rounded-2xl border border-violet-500/20 bg-violet-500/[0.04] p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h3 class="font-bold">Dict Cloud + auto-updates</h3>
+              <span class="px-2 py-0.5 rounded-full bg-violet-500/10 text-xs font-medium text-violet-400">Done</span>
+            </div>
+            <p class="text-sm text-neutral-400">Optional managed cleanup if you do not want to run your own model, plus over-the-air updates so you never re-download.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- Coming Soon -->
       <div>
         <div class="flex items-center gap-2 mb-6">
@@ -62,23 +108,10 @@
         <div class="grid gap-4">
           <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-6 hover:border-emerald-500/30 transition-colors">
             <div class="flex items-start justify-between gap-4 mb-3">
-              <h3 class="font-bold">Multi-platform Support</h3>
-              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-xs font-medium text-emerald-400">High Priority</span>
-            </div>
-            <p class="text-sm text-neutral-400 mb-4">Bring Dict to Windows and Linux. Same great experience, everywhere you work. Native performance on each platform.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🍎 macOS</span>
-              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🪟 Windows</span>
-              <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🐧 Linux</span>
-            </div>
-          </div>
-
-          <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-6 hover:border-emerald-500/30 transition-colors">
-            <div class="flex items-start justify-between gap-4 mb-3">
               <h3 class="font-bold">More Languages</h3>
               <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-xs font-medium text-emerald-400">High Priority</span>
             </div>
-            <p class="text-sm text-neutral-400 mb-4">Expand beyond English and Portuguese. Spanish, French, German, Italian, and more. Auto-detection would be nice too.</p>
+            <p class="text-sm text-neutral-400 mb-4">Right now it is English and Portuguese. Whisper speaks plenty more, so Spanish, French, German, and friends are next. Auto-detection would be nice too.</p>
             <div class="flex flex-wrap gap-2">
               <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🇪🇸 Spanish</span>
               <span class="px-2 py-1 rounded-lg bg-neutral-900 text-xs text-neutral-500">🇫🇷 French</span>
@@ -91,17 +124,9 @@
 
           <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-6 hover:border-emerald-500/30 transition-colors">
             <div class="flex items-start justify-between gap-4 mb-3">
-              <h3 class="font-bold">Custom Hotkeys</h3>
-              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-xs font-medium text-emerald-400">High Priority</span>
+              <h3 class="font-bold">Longer recordings</h3>
             </div>
-            <p class="text-sm text-neutral-400">Let users pick their own hotkey instead of hardcoding ⌥Space. Some people already use that for something else.</p>
-          </div>
-
-          <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-6 hover:border-emerald-500/30 transition-colors">
-            <div class="flex items-start justify-between gap-4 mb-3">
-              <h3 class="font-bold">Transcription History</h3>
-            </div>
-            <p class="text-sm text-neutral-400">Keep a log of recent transcriptions. Sometimes you need to grab something you said 5 minutes ago.</p>
+            <p class="text-sm text-neutral-400">The 15-second cap keeps things snappy, but sometimes you have more to say. We want a sane way to lift it.</p>
           </div>
         </div>
       </div>
@@ -141,9 +166,9 @@
 
           <div class="rounded-2xl border border-white/[0.06] bg-neutral-950 p-6 hover:border-white/[0.12] transition-colors">
             <div class="flex items-start justify-between gap-4 mb-3">
-              <h3 class="font-bold">iCloud Sync</h3>
+              <h3 class="font-bold">Settings Sync</h3>
             </div>
-            <p class="text-sm text-neutral-400">Sync config, snippets, commands, and dictionary across your Macs via iCloud. No server needed.</p>
+            <p class="text-sm text-neutral-400">Sync config, snippets, commands, and dictionary across your machines. Bring your own storage, no server of ours required.</p>
           </div>
 
           <div class="rounded-2xl border border-white/[0.06] bg-neutral-950 p-6 hover:border-white/[0.12] transition-colors">
@@ -173,7 +198,7 @@
             <div class="flex items-start justify-between gap-4 mb-3">
               <h3 class="font-bold text-neutral-400">Audio Transcription</h3>
             </div>
-            <p class="text-sm text-neutral-500">Drag an audio file onto the menu bar icon to transcribe it. Useful for meeting recordings, voice memos.</p>
+            <p class="text-sm text-neutral-500">Drop an audio file onto Dict to transcribe it. Handy for meeting recordings and voice memos.</p>
           </div>
 
           <div class="rounded-2xl border border-white/[0.06] bg-neutral-950/50 p-6">
@@ -196,7 +221,7 @@
       <div class="rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-500/[0.05] to-transparent p-8 text-center">
         <h3 class="text-xl font-bold mb-2">Got an idea?</h3>
         <p class="text-neutral-400 mb-4">We're building this for us, but we're open to suggestions.</p>
-        <p class="text-neutral-600 text-sm mb-6 italic">Please don't ask for more things though — the backlog is already terrifying. 😅</p>
+        <p class="text-neutral-600 text-sm mb-6 italic">Please do not ask for more things though. The backlog is already terrifying. 😅</p>
         <a href="mailto:victorlcmonteiro@gmail.com?subject=Dict%20Feature%20Request" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-sm font-medium text-violet-400 hover:bg-violet-500/20 transition-colors cursor-pointer">
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
           Send me an email anyway

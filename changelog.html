@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Changelog — Dict</title>
-  <meta name="description" content="What's new in Dict, the macOS speech-to-text app.">
+  <title>Changelog · Dict</title>
+  <meta name="description" content="What's new in Dict, the cross-platform speech-to-text app for macOS, Linux, and Windows.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -54,13 +54,155 @@
   <section class="px-6 pb-24">
     <div class="max-w-3xl mx-auto space-y-12">
 
-      <!-- v0.3.3 -->
+      <!-- v0.8.1 -->
       <div class="relative pl-8 border-l-2 border-violet-500/30">
         <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-violet-500 border-4 border-black"></div>
         <div class="mb-4">
           <div class="flex items-center gap-3 mb-1">
-            <h2 class="text-xl font-bold">v0.3.3</h2>
+            <h2 class="text-xl font-bold">v0.8.1</h2>
             <span class="px-2 py-0.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-xs font-medium text-violet-400">Latest</span>
+          </div>
+          <p class="text-sm text-neutral-600">June 2026</p>
+        </div>
+        <div class="space-y-4 mb-12">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-blue-400 mb-3">🔧 Improvements</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Updates itself now.</strong> This is the first build that pulls future versions over the air. You install it once and forget about it.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Windows updates too.</strong> Fixed the Windows entry in the update manifest so it stops getting left out.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0.8.0 -->
+      <div class="relative pl-8 border-l-2 border-white/[0.06]">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+        <div class="mb-4">
+          <h2 class="text-xl font-bold mb-1">v0.8.0</h2>
+          <p class="text-sm text-neutral-600">June 2026</p>
+        </div>
+        <div class="space-y-4 mb-12">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-emerald-400 mb-3">✨ New Features</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Over-the-air updates.</strong> Dict checks for new versions and updates in place. No more re-downloading.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Dict Cloud.</strong> Optional managed cleanup with accounts and plans, for when you do not want to run a model yourself. Off by default.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Linux and Windows builds.</strong> Signed installers for all three platforms, straight from CI.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Copy fallback.</strong> When Dict cannot paste into an app, it hands you the text in a quick popup instead of losing it.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0.6.0 -->
+      <div class="relative pl-8 border-l-2 border-white/[0.06]">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+        <div class="mb-4">
+          <h2 class="text-xl font-bold mb-1">v0.6.0</h2>
+          <p class="text-sm text-neutral-600">April 2026</p>
+        </div>
+        <div class="space-y-4 mb-12">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-emerald-400 mb-3">✨ New Features</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Whisper model manager.</strong> Download and switch models from inside the app. No more hunting for files.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Configurable hotkey.</strong> Set any shortcut you want instead of the default.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Preferences overhaul.</strong> Cleaner sidebar, more breathing room, less clutter.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0.5.0 -->
+      <div class="relative pl-8 border-l-2 border-white/[0.06]">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+        <div class="mb-4">
+          <h2 class="text-xl font-bold mb-1">v0.5.0</h2>
+          <p class="text-sm text-neutral-600">March 2026</p>
+        </div>
+        <div class="space-y-4 mb-12">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-amber-400 mb-3">⚡ Changes</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Whisper is the only engine now.</strong> Apple Speech is gone. Same privacy, and it works the same on every platform.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">In-app editors.</strong> Edit history, dictionary, snippets, and voice commands without touching a config file.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Privacy mode.</strong> Skip cloud LLMs and stop saving history with one toggle.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">15-second cap.</strong> Recordings stop at 15 seconds to keep things snappy.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0.4.0 -->
+      <div class="relative pl-8 border-l-2 border-white/[0.06]">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+        <div class="mb-4">
+          <h2 class="text-xl font-bold mb-1">v0.4.0</h2>
+          <p class="text-sm text-neutral-600">March 2026</p>
+        </div>
+        <div class="space-y-4 mb-12">
+          <div class="rounded-xl border border-white/[0.06] bg-neutral-950 p-5">
+            <h3 class="font-semibold text-sm text-emerald-400 mb-3">✨ New Features</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Rebuilt on Tauri 2.0 and Rust.</strong> One codebase, ready for three platforms, lighter than the old build.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 mt-0.5">•</span>
+                <span><strong class="text-neutral-200">Cross-platform groundwork.</strong> The plumbing for Linux and Windows lands here.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0.3.3 -->
+      <div class="relative pl-8 border-l-2 border-white/[0.06]">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+        <div class="mb-4">
+          <div class="flex items-center gap-3 mb-1">
+            <h2 class="text-xl font-bold">v0.3.3</h2>
           </div>
           <p class="text-sm text-neutral-600">February 2026</p>
         </div>
@@ -70,11 +212,11 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-rose-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Fixed dropped transcriptions</strong> — No longer preempts final result with empty delivery. Your words actually make it to the screen now.</span>
+                <span><strong class="text-neutral-200">Fixed dropped transcriptions</strong>: No longer preempts final result with empty delivery. Your words actually make it to the screen now.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-rose-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Error handler cleanup</strong> — Better error handling that doesn't leave things in a weird state.</span>
+                <span><strong class="text-neutral-200">Error handler cleanup</strong>: Better error handling that doesn't leave things in a weird state.</span>
               </li>
             </ul>
           </div>
@@ -83,11 +225,11 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Accessibility permission required</strong> — Now properly requests Accessibility access for reliable text injection.</span>
+                <span><strong class="text-neutral-200">Accessibility permission required</strong>: Now properly requests Accessibility access for reliable text injection.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Whisper setup guide</strong> — Added documentation for setting up local Whisper.</span>
+                <span><strong class="text-neutral-200">Whisper setup guide</strong>: Added documentation for setting up local Whisper.</span>
               </li>
             </ul>
           </div>
@@ -109,11 +251,11 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">DictCore library</strong> — Extracted core functionality into a reusable library.</span>
+                <span><strong class="text-neutral-200">DictCore library</strong>: Extracted core functionality into a reusable library.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Test infrastructure</strong> — Added testing framework for better reliability.</span>
+                <span><strong class="text-neutral-200">Test infrastructure</strong>: Added testing framework for better reliability.</span>
               </li>
             </ul>
           </div>
@@ -122,7 +264,7 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-rose-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Push-to-talk fix</strong> — Resolved issues with push-to-talk mode.</span>
+                <span><strong class="text-neutral-200">Push-to-talk fix</strong>: Resolved issues with push-to-talk mode.</span>
               </li>
             </ul>
           </div>
@@ -131,7 +273,7 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Signed DMG</strong> — DMG is now properly signed for smoother installation.</span>
+                <span><strong class="text-neutral-200">Signed DMG</strong>: DMG is now properly signed for smoother installation.</span>
               </li>
             </ul>
           </div>
@@ -153,11 +295,11 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Branded DMG</strong> — Custom installer with Gatekeeper fix script.</span>
+                <span><strong class="text-neutral-200">Branded DMG</strong>: Custom installer with Gatekeeper fix script.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Notarization support</strong> — App is now notarized by Apple for smoother first launch.</span>
+                <span><strong class="text-neutral-200">Notarization support</strong>: App is now notarized by Apple for smoother first launch.</span>
               </li>
             </ul>
           </div>
@@ -179,19 +321,19 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Voice Commands</strong> — Map spoken phrases to keyboard shortcuts. Say "take a screenshot" to trigger ⌘⇧3.</span>
+                <span><strong class="text-neutral-200">Voice Commands</strong>: Map spoken phrases to keyboard shortcuts. Say "take a screenshot" to trigger ⌘⇧3.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Branded DMG Installer</strong> — Custom DMG with gradient background and drag-to-install arrow. Looks pretty now.</span>
+                <span><strong class="text-neutral-200">Branded DMG Installer</strong>: Custom DMG with gradient background and drag-to-install arrow. Looks pretty now.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Modern Preferences</strong> — Redesigned preferences window with sidebar navigation.</span>
+                <span><strong class="text-neutral-200">Modern Preferences</strong>: Redesigned preferences window with sidebar navigation.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Update Checker</strong> — Automatically checks for new versions on launch.</span>
+                <span><strong class="text-neutral-200">Update Checker</strong>: Automatically checks for new versions on launch.</span>
               </li>
             </ul>
           </div>
@@ -228,19 +370,19 @@
             <ul class="space-y-2 text-sm text-neutral-400">
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">LM Studio Support</strong> — Added LM Studio as a separate LLM provider alongside Ollama.</span>
+                <span><strong class="text-neutral-200">LM Studio Support</strong>: Added LM Studio as a separate LLM provider alongside Ollama.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Flow Mode</strong> — Auto-press Return after pasting. Perfect for chat apps and terminals.</span>
+                <span><strong class="text-neutral-200">Flow Mode</strong>: Auto-press Return after pasting. Perfect for chat apps and terminals.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Overlay Position</strong> — Choose between top or bottom screen position for the recording pill.</span>
+                <span><strong class="text-neutral-200">Overlay Position</strong>: Choose between top or bottom screen position for the recording pill.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-emerald-400 mt-0.5">•</span>
-                <span><strong class="text-neutral-200">Code Signing</strong> — Proper code signing for persistent permissions across updates.</span>
+                <span><strong class="text-neutral-200">Code Signing</strong>: Proper code signing for persistent permissions across updates.</span>
               </li>
             </ul>
           </div>
